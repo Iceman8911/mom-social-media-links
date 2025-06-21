@@ -3,6 +3,11 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   vite: {
-    plugins: [tailwindcss()]
-  }
+    plugins: [tailwindcss()],
+  },
+  server: {
+    prerender: { routes: ["/"] },
+    preset: "cloudflare_pages",
+    cloudflare: { deployConfig: true },
+  },
 });
