@@ -8,6 +8,9 @@ export default defineConfig({
   server: {
     prerender: { crawlLinks: true },
     preset: "cloudflare_pages",
-    cloudflare: { deployConfig: true },
+    cloudflare: {
+      deployConfig: true,
+      wrangler: { name: "mom-social-media-links" },
+    },
   },
 });
