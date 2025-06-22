@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   server: {
-    prerender: { routes: ["/"] },
+    prerender: { crawlLinks: true },
     preset: "cloudflare_pages",
     cloudflare: { deployConfig: true },
   },
