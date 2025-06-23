@@ -12,5 +12,6 @@ export default defineConfig({
       deployConfig: true,
       wrangler: { name: "mom-social-media-links" },
     },
+    compressPublicAssets: true,
   },
 });
