@@ -27,7 +27,9 @@ function SocialMediaHandle(props: {
 	link: string;
 }) {
 	return (
-		<button
+		<a
+			href={props.link}
+			target="_blank"
 			type="button"
 			class="btn btn-primary rounded-lg w-[75vw] sm:w-100 h-16 grid [grid-template-columns:25%_1fr] gap-4 font-bold *:flex *:items-center *:w-full *:h-full"
 		>
@@ -93,7 +95,7 @@ function SocialMediaHandle(props: {
 					<Match when={props.socialMedia === "tiktok"}>Tiktok</Match>
 				</Switch>
 			</div>
-		</button>
+		</a>
 	);
 }
 
@@ -121,8 +123,18 @@ export default function Home() {
 			</p>
 
 			<div class="flex flex-col justify-center items-center gap-8">
-				<SocialMediaHandle socialMedia="whatsapp" link="" />
-				<SocialMediaHandle socialMedia="telegram" link="" />
+				<SocialMediaHandle
+					socialMedia="whatsapp"
+					link="https://chat.whatsapp.com/CNXLAsqd8Sp8whU7UdvyDh"
+				/>
+				<SocialMediaHandle
+					socialMedia="telegram"
+					link="https://t.me/+heRBOxU4HB5iYzFk"
+				/>
+				<SocialMediaHandle
+					socialMedia="tiktok"
+					link="https://www.tiktok.com/@christathriftwears?_r=1&_d=eh14g6lclimbff&sec_uid=MS4wLjABAAAAfjWKMqNf_ZAVhJDpDhG9yJ_x3XxF09os4x34jD1xFNKGO_dF2ciwPwUMa9hPuArv&share_author_id=7096529035811374086&sharer_language=en&source=h5_m&u_code=e1j012078lg0k5&timestamp=1750623617&user_id=7096529035811374086&sec_user_id=MS4wLjABAAAAfjWKMqNf_ZAVhJDpDhG9yJ_x3XxF09os4x34jD1xFNKGO_dF2ciwPwUMa9hPuArv&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7511992966116017928&share_link_id=1b293dd8-1387-4662-b9d0-2e5e35ae213f&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1"
+				/>
 			</div>
 		</main>
 	);
